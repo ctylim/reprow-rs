@@ -28,21 +28,21 @@ impl Config {
                 Arg::with_name("src")
                     .long("src")
                     .value_name("PATH")
-                    .help("Sets source file paths (space separated). If not set, source sets to stdin. (default: None)")
+                    .help("Sets source file path. If not set, source sets to stdin. (default: stdin)")
                     .takes_value(true),
             )
             .arg(
                 Arg::with_name("dst")
                     .long("dst")
                     .value_name("PATH")
-                    .help("Sets destination file path. If not set, destination sets to stdout. (default: None)")
+                    .help("Sets destination file path. If not set, destination sets to stdout. (default: stdout)")
                     .takes_value(true),
             )
             .arg(
                 Arg::with_name("col")
                     .long("col")
                     .value_name("STRING")
-                    .help("Sets column which specifies times to repeat rows.")
+                    .help("Sets column which specifies times to repeat rows.\nEach row in the column must be non-negative integer.")
                     .takes_value(true),
             )
             .get_matches();
