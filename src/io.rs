@@ -34,7 +34,7 @@ pub fn read_line_from_csv<R: std::io::Read>(conf: &Config, reader: &mut csv::Rea
 }
 
 pub fn reprow(writer: &mut csv::Writer<Box<dyn std::io::Write>>, record: &StringRecord, header_ind: &usize) -> Result<(), Box<dyn Error>> {
-    let rep_count: usize = record.get(*header_ind).ok_or("record with col index not found")?.parse::<usize>()?;
+    let rep_count: i32 = record.get(*header_ind).ok_or("record with col index not found")?.parse::<i32>()?;
     for _ in 0..rep_count {
         writer.write_record(record)?;
         writer.flush()?;
