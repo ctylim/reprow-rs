@@ -42,7 +42,7 @@ impl Config {
                 Arg::with_name("col")
                     .long("col")
                     .value_name("STRING")
-                    .help("Sets column which specifies times to repeat rows.\nEach row in the column must be non-negative integer.")
+                    .help("Sets column which specifies times to repeat rows.\nRows are skipped if the column is non-positive integer.")
                     .takes_value(true),
             )
             .get_matches();

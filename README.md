@@ -14,7 +14,7 @@ FLAGS:
 OPTIONS:
         --col <STRING>
             Sets column which specifies times to repeat rows.
-            Each row in the column must be non-negative integer.
+            Rows are skipped if the column is non-positive integer.
         --dst <PATH>
             Sets destination file path. If not set, destination sets to stdout. (default: stdout)
 
